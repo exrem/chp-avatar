@@ -104,7 +104,7 @@ export default function Home() {
   return (
     <>
       <main className='m-auto p-4 w-screen h-[85vh] overflow-y-scroll xl:w-2/5'>
-        <nav className='flex flex-row justify-center items-center mb-4 p-4 bg-zinc-800 bg-opacity-60 w-full min-h-fit border border-zinc-400 rounded-lg'>
+        <nav className='flex flex-row justify-center items-center mb-4 p-4 bg-zinc-800 bg-opacity-60 w-full min-h-fit border border-zinc-400'>
           <ImageComponent src='/favicon.ico' alt='CHP Flag with a LGBT Pride background.' width={48} height={48} className='mr-2 w-12 rounded-full' />
           <h1 className='ml-2 text-2xl font-extrabold uppercase'>{dictionary.title}</h1>
         </nav>

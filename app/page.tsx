@@ -16,7 +16,7 @@ import themeGroups from './data/themes'
 
 import Footer from './components/footer'
 
-export default function () {
+export default function Home() {
   const [language, setLanguage] = useState('en'),
     [dictionary, setDictionary] = useState(localize(language)),
     [selectedTheme, setSelectedTheme] = useState({

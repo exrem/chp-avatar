@@ -1,0 +1,29 @@
+<svg width="1024" height="1024" viewBox="0 0 1024 1024" fill="none"
+    xmlns="http://www.w3.org/2000/svg" class="m-auto w-[85%] h-auto" id="chp"
+    xmlns:xhtml="http://www.w3.org/1999/xhtml">
+    <rect width="1024" height="1024" fill="#0038A8"></rect>
+    <rect width="1024" height="614.4" fill="#9B4F96"></rect>
+    <rect width="1024" height="409.6" fill="#D60270"></rect>
+    <path
+        d="M233.068 737.937V755.486L635.976 749.335L650.912 759L696.553 744.966L649.155 730.029L635.121 738.792L233.068 737.937Z"
+        fill="#FFFFFF" stroke="#FFFFFF" stroke-width="2.82384" stroke-miterlimit="3.864"></path>
+    <path
+        d="M227.795 700.165L230.431 717.737L794.008 593.091L812.436 598.363L855.441 575.519L807.164 570.247L789.615 583.427L227.795 700.165Z"
+        fill="#FFFFFF" stroke="#FFFFFF" stroke-width="2.82384" stroke-miterlimit="3.864"></path>
+    <path
+        d="M212.864 665.073L827.33 396.452L837.873 380.637L887.029 373.632L851.052 406.996L830.844 404.36L222.528 681.767L224.262 669.443L212.864 665.073Z"
+        fill="#FFFFFF" stroke="#FFFFFF" stroke-width="2.82384" stroke-miterlimit="3.864"></path>
+    <path
+        d="M192.66 633.482L204.96 648.395L666.712 306.017L689.509 303.405L717.625 266.55L671.082 278.827L662.319 298.133L192.66 633.482Z"
+        fill="#FFFFFF" stroke="#FFFFFF" stroke-width="2.82384" stroke-miterlimit="3.864"></path>
+    <path fill-rule="evenodd" clip-rule="evenodd"
+        d="M168.091 606.255L180.392 620.289L449.892 313.935L468.319 309.518L489.382 265.635L449.013 285.843L443.741 306.004L168.091 606.255Z"
+        fill="#FFFFFF" stroke="#FFFFFF" stroke-width="2.82384" stroke-miterlimit="3.864"></path>
+    <path fill-rule="evenodd" clip-rule="evenodd"
+        d="M136.5 586.073L297.145 318.331L298.024 298.146L333.145 264.782L324.359 313.059L304.174 322.724L152.315 597.495L136.5 586.073Z"
+        fill="#FFFFFF" stroke="#FFFFFF" stroke-width="2.82384" stroke-miterlimit="3.864"></path>
+    <foreignObject x="0" y="0" width="1024" height="1024">
+        <xhtml:img src="https://cdn.upload.systems/uploads/Y8u4dj8y.png" alt="Killua Zoldyck"
+            width="1024" height="1024" />
+    </foreignObject>
+</svg>

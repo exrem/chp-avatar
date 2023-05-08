@@ -10,15 +10,14 @@ import { Buffer } from 'buffer'
 
 // local files
 
-import animéCharacters from './data/animécharacters'
+import animéCharacters from './data/animéCharacters'
 import localize from './data/localization'
 import themeGroups from './data/themes'
 
 import Footer from './components/footer'
 
 export default function Home() {
-  const [language, setLanguage] = useState('en'),
-    [dictionary, setDictionary] = useState(localize(language)),
+  const [dictionary, setDictionary] = useState(localize('tr')),
     [selectedTheme, setSelectedTheme] = useState({
       name: 'LGBT Pride',
       background: {
@@ -34,8 +33,7 @@ export default function Home() {
     [location, setLocation] = useState('')
 
   useEffect(() => {
-    setLanguage(navigator.language)
-    setDictionary(localize(language))
+    setDictionary(localize(navigator.language))
 
     setLocation(window.location.href)
   }, [])
@@ -103,7 +101,7 @@ export default function Home() {
 
   return (
     <>
-      <main className='m-auto p-4 w-screen h-[85vh] overflow-y-scroll xl:w-2/5'>
+      <main className='m-auto p-4 pb-[10vh] w-screen h-[85vh] overflow-y-scroll xl:w-2/5'>
         <nav className='flex flex-row justify-center items-center mb-4 p-4 bg-zinc-800 bg-opacity-60 w-full min-h-fit border border-zinc-400'>
           <ImageComponent src='/favicon.ico' alt='CHP Flag with a LGBT Pride background.' width={48} height={48} className='mr-2 w-12 rounded-full' />
           <h1 className='ml-2 text-2xl font-extrabold uppercase'>{dictionary.title}</h1>
@@ -142,13 +140,13 @@ export default function Home() {
             <Listbox.Label>{dictionary.selectAnAnimeCharacter}</Listbox.Label>
 
             <Listbox.Button className='flex flex-row justify-center items-center my-2 p-4 bg-zinc-900 bg-opacity-60 w-full min-h-fit text-xl border border-zinc-400 hover:bg-opacity-80 active:bg-opacity-100'>
-              {selectedAniméCharacter == '-' ? <></> : <ImageComponent src={`/animecharacters/${encodeURIComponent(selectedAniméCharacter)}.png`} alt='' width={48} height={48} className='mr-3 w-8 object-scale-down' />}
-              {selectedAniméCharacter == '-' ? 'None' : selectedAniméCharacter}
+              {selectedAniméCharacter ? <ImageComponent src={`/animecharacters/${encodeURIComponent(selectedAniméCharacter)}.png`} alt='' width={48} height={48} className='mr-3 w-8 object-scale-down' /> : <></>}
+              {selectedAniméCharacter ? selectedAniméCharacter : 'None'}
             </Listbox.Button>
 
             <Listbox.Options className='absolute py-2 bg-zinc-900 w-[calc(100%-2rem)] max-h-[45vh] border border-zinc-400 overflow-y-auto xl:w-[calc(18%-0.9rem)] xl:max-h-96'>
-              <Listbox.Option key='-' value='-' className={`${selectedAniméCharacter == '-' ? 'bg-marroon font-medium hover:bg-opacity-100 active:bg-opacity-100' : ''} flex flex-row items-center px-4 py-4 w-full min-h-fit cursor-pointer hover:bg-marroon hover:bg-opacity-30 active:bg-opacity-60`}>
-                <ImageComponent src='/animecharacters/-.png' alt='' width={32} height={32} className='mr-2 w-8 object-scale-down' />
+              <Listbox.Option key={null} value={null} className={`${selectedAniméCharacter ? '' : 'bg-marroon font-medium hover:bg-opacity-100 active:bg-opacity-100'} flex flex-row items-center px-4 py-4 w-full min-h-fit cursor-pointer hover:bg-marroon hover:bg-opacity-30 active:bg-opacity-60`}>
+                <span className='mr-2 w-8 object-scale-down'></span>
                 None
               </Listbox.Option>
 

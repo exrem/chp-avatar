@@ -1,10 +1,10 @@
-export default (language: string): {
+export default function localize (language: string): {
     title: string,
     selectATheme: string,
     selectAnAnimeCharacter: string,
     result: string,
     download: string
-} => {
+} {
     return {
         az: {
             title: 'CHP Avatar Hazırlayıcı',

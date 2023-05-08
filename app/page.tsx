@@ -10,7 +10,7 @@ import { Buffer } from 'buffer'
 
 // local files
 
-import animéCharacters from './data/animéCharacters'
+import animéCharacters from './data/animécharacters'
 import localize from './data/localization'
 import themeGroups from './data/themes'
 

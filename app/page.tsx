@@ -77,6 +77,7 @@ export default function Home() {
 
         return done(canvas.toDataURL('image/png'))
       }
+      
       img.src = svgURL
     }
 

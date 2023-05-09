@@ -64,6 +64,7 @@ export default function Home() {
       const svgElement: any = document.querySelector('svg#chp'),
         svgData = new XMLSerializer().serializeToString(svgElement),
         svgURL = `data:image/svg+xml;base64,${Buffer.from(svgData).toString('base64')}`
+          .replace (/\<image(.*)\/>/, '') // causing an error while exporting in png format
 
       const canvas = document.createElement('canvas')
       canvas.width = 1024
@@ -192,7 +193,7 @@ export default function Home() {
 
             {
               selectedAniméCharacter ? (
-                <image href={`${location}animecharacters/Killua%20Zoldyck.png`} width={1024} height={1024} />
+                <image href={`${location}animecharacters/${encodeURIComponent (selectedAniméCharacter)}.png`} width={1024} height={1024} />
               ) : (
                 <></>
               )

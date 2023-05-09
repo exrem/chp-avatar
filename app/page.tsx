@@ -192,7 +192,7 @@ export default function Home() {
 
             {
               selectedAniméCharacter ? (
-                <image href={`${location}animecharacters/Killua&20Zoldyck.png`} width={1024} height={1024} />
+                <image href={`${location}animecharacters/Killua%20Zoldyck.png`} width={1024} height={1024} />
               ) : (
                 <></>
               )

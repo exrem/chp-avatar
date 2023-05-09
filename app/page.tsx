@@ -62,9 +62,9 @@ export default function Home() {
   const downloadPNG = () => {
     const convertToPNG = (done: Function) => {
       const svgElement: any = document.querySelector('svg#chp'),
-        svgData = new XMLSerializer().serializeToString(svgElement),
+        svgData = new XMLSerializer().serializeToString(svgElement)
+          .replace (/\<image(.*)\/>/, ''), // causing an error while exporting in png format
         svgURL = `data:image/svg+xml;base64,${Buffer.from(svgData).toString('base64')}`
-          .replace (/\<image(.*)\/>/, '') // causing an error while exporting in png format
 
       const canvas = document.createElement('canvas')
       canvas.width = 1024

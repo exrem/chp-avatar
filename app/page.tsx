@@ -76,7 +76,14 @@ export default function Home() {
       img.onload = () => {
         ctx?.drawImage(img, 0, 0, 1024, 1024)
 
-        return done(canvas.toDataURL('image/png'))
+        if (!selectedAniméCharacter) return done(canvas.toDataURL('image/png'))
+
+        const animéCharacter = new Image()
+        animéCharacter.onload = () => {
+          ctx?.drawImage(animéCharacter, 0, 0, 1024, 1024)
+          done(canvas.toDataURL('image/png'))
+        }
+        animéCharacter.src = `${location}animecharacters/${encodeURIComponent(selectedAniméCharacter)}.png`
       }
       
       img.src = svgURL

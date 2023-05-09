@@ -81,20 +81,20 @@ export default function Home() {
         const animéCharacter = new Image()
         animéCharacter.onload = () => {
           ctx?.drawImage(animéCharacter, 0, 0, 1024, 1024)
+
+          done(canvas.toDataURL('image/png'))
         }
         animéCharacter.src = `${location}animecharacters/${encodeURIComponent(selectedAniméCharacter)}.png`
       }
 
       img.src = svgURL
-
-      done(canvas.toDataURL('image/png'))
     }
 
     convertToPNG((pngURL: any) => {
       const linkElement = document.createElement('a')
 
       linkElement.setAttribute('href', pngURL)
-      linkElement.setAttribute('download', `${selectedTheme.name} CHP.png`)
+      linkElement.setAttribute('download', `${selectedTheme.name} CHP${selectedAniméCharacter ? ` with ${selectedAniméCharacter}` : ''}.png`)
 
       document.body.appendChild(linkElement)
       linkElement.click()
@@ -192,7 +192,7 @@ export default function Home() {
 
             {
               selectedAniméCharacter ? (
-                <image href={`${location}animecharacters/${encodeURIComponent(selectedAniméCharacter)}.png`} width={1024} height={1024} />
+                <image href={`${location}animecharacters/Killua&20Zoldyck.png`} width={1024} height={1024} />
               ) : (
                 <></>
               )

@@ -34,7 +34,7 @@ export default function localize (language: string): {
             result: 'Sonuç:',
             download: 'İndirin'
         }
-    } [language] ?? {
+    } [language.slice (0, 2)] ?? {
         title: 'CHP Avatar Generator',
         selectATheme: 'Select a theme:',
         selectAnAnimeCharacter: 'Select an anime character:',

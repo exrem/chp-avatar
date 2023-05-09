@@ -72,6 +72,7 @@ export default function Home() {
       const ctx = canvas.getContext('2d')
 
       const img = new Image()
+      
       img.onload = () => {
         ctx?.drawImage(img, 0, 0, 1024, 1024)
 

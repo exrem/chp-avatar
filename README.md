@@ -14,11 +14,8 @@ You can do these in just a few miliseconds 😏
 - code optimizations
 - updated to next.js v13.4 🛠️
 
-### Changes in v1.1.1
-- added chusaku kometani :3
-- deleted some unnecessary files lol
-- fixed localization
-- optimized mobile view
+### Changes in v1.1.2
+- fixed the empty image problem in the png export
 
 ## **Planned:**
 We're plannin' to include these new features in the new updates.
